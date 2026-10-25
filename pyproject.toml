@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mailmap-impact"
+version = "0.1.0"
+description = "Preview native Git mailmap changes with merge and split witnesses"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "KanadeK"}]
+dependencies = []
+
+[project.scripts]
+mailmap-impact = "mailmap_impact.cli:main"
+
+[project.urls]
+Repository = "https://github.com/KanadeK/mailmap-impact"
+Issues = "https://github.com/KanadeK/mailmap-impact/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
